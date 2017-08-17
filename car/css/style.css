@@ -1,0 +1,846 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+img{
+  border: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+ul{
+  list-style: none;
+}
+body{
+  font-size: 14px;
+  font-family: "Microsoft Yahei","SimSun","SimHei";
+  min-width: 1200px;
+}
+.clearfix:after{
+  display: block;
+  content: '';
+  clear: both;
+}
+.cl{
+  clear: both;
+}
+.clearfix{
+  zoom: 1;
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+.text-center{
+  text-align: center;
+}
+.wp{
+  width: 1200px;
+  margin: 0 auto;
+}
+/*首页开始*/
+.header{
+  width: 100%;
+    height: 32px;
+    background: #ebebeb;
+}
+.wbx li{
+  float: left;
+  height: 32px;
+  margin-right: 10px;
+  position: relative;
+}
+.wx_img{
+  display: none;
+  position: absolute;
+  z-index: 2;
+}
+.wx_li:hover .wx_img{
+  display: block;
+  left: -50px;
+  top: 30px;
+} 
+.wx_img img{
+  display: inline-block;
+}
+.s1{
+  font-size: 12px; 
+  line-height: 32px;  
+  margin-right: 5px;
+}
+.top_link{ 
+  width: 210px;
+  float: left;
+  font-size:12px;
+  line-height:32px; 
+}
+.ser {
+  width:272px;
+  height:21px;
+  padding-top:6px;
+  float:left;
+}
+.top_link a {
+  padding:0 7px;
+}
+.search {
+  width:272px;
+  height:21px;
+  background:url(../images/ser.jpg) no-repeat;
+  position:relative;
+}
+.search input {
+  position:absolute;
+  width:216px;
+  height:21px;
+  line-height:21px;
+  color:#424242;
+  border:none;
+  background:none;
+  left:0px;
+  top:0px;
+  padding-left:0px;
+}
+.search input.notxt {
+  color:#424242;
+  padding-left:5px;
+}
+.search input.notxt1 {
+  position:absolute;
+  width:51px;
+  height:21px;
+  top:0px;
+  left:221px;
+  border:none;
+  background:none;
+  cursor:pointer;
+}
+.top_ser {
+  width:65px;
+  height:21px;
+  float:right;
+  padding-top:6px;
+}
+/*轮播*/
+.banner{
+  width: 100%;
+ 
+}
+.banner .swiper-container {
+  width: 100%;
+  height: 420px; 
+}
+.banner .swiper-container .swiper-slide img{
+  width: 100%;
+   height:420px;
+}
+/*导航*/
+.nav {
+  width: 100%;
+  background: #0965b2;
+  height: 40px;
+  line-height: 40px;
+}
+.nav ul li{
+  float: left;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  text-align: center;
+  background: #0965b2;
+}
+.nav ul li:hover{
+  background: #f9644e;
+  transition: all 0.8s;
+}
+.nav ul .hover{
+  background: #f9644e;
+}
+.nav ul li a{
+  display: inline-block;
+  width: 100%;
+  color: #fff;
+  font-size: 14px;
+}
+
+/*正文*/
+.content{
+  width: 1200px;
+  margin: 0 auto;
+}
+.con1{
+  height: 320px;
+  overflow: hidden;
+}
+.con2{
+  height: 346px;
+  overflow: hidden;
+}
+.con3{
+  height: 300px;
+  overflow: hidden;
+}
+/*第一个行 图片展示*/
+.hot_img{
+  float: left;
+  width: 520px;
+  height: 300px;
+}
+.indexFocus {
+  border:1px solid #CCC;
+  padding:2px;
+  width:500px;
+  height:300px; 
+}
+.indexFocus .focusBox {
+  width:500px;
+  height:300px;
+  position:relative;
+  margin:0 auto;
+  position:relative
+}
+.indexFocus .focusBox .bigPic {
+  width:500px;
+  height:300px;
+  overflow:hidden;
+  position:relative
+}
+.indexFocus .focusBox .bigPic li {
+  width:500px;
+  height:300px
+}
+.indexFocus .focusBox .bigPic img {
+  width:500px;
+  height:300px
+}
+.indexFocus .focusBox .btn {
+  height:16px;
+  position:absolute;
+  right:8px;
+  bottom:4px;
+  z-index:11
+}
+.indexFocus .focusBox .btn ul li {
+  width:15px;
+  height:15px;
+  line-height:15px;
+  margin-right:2px;
+  display:block;
+  background:#fff;
+  float:left;
+  text-align:center;
+  cursor:pointer
+}
+.indexFocus .focusBox .btn .sel {
+  width:15px;
+  height:15px;
+  background:#B90101;
+  color:#fff
+}
+.indexFocus .focusBox .picText_bg {
+  width:100%;
+  height:26px;
+  position:absolute;
+  left:0;
+  bottom:0;
+  background:#000;
+  filter:alpha(opacity=50);
+  /*IE*/-moz-opacity:0.5;
+  /*MOZ,FF*/opacity:0.5;
+  /*CSS3,FF1.5*/
+}
+.indexFocus .focusBox .picText {
+  width:100%;
+  height:26px;
+  line-height:26px;
+  text-align:left;
+  font-weight:bold;
+  margin:0 auto;
+  position:absolute;
+  left:0;
+  bottom:0;
+  overflow:hidden;
+  z-index:10;
+}
+.indexFocus .focusBox .picText a {
+  padding-left:10px;
+  color:#fff;
+}
+.hot_txt{
+  float: left;
+  width: 660px;
+  height: 290px;
+  padding: 10px;
+  overflow: hidden;
+}
+.hot_txt h2{
+  color: #d60000;
+  text-align: center;
+}
+.hot_txt h2 a{
+  color: #d60000;
+}
+.hot_pd{
+  color: #999;
+  margin-top: 4px;
+  text-align: center;
+}
+.date{
+  color: #999;
+}
+.hotnews_ul li{
+  text-align: right;
+  margin: 11px 0;
+}
+.hotnews_ul li a{
+  float: left;
+}
+/*第二行展示*/
+.important_car{
+  float: left;
+  width:500px;
+}
+.car_title{
+  height: 38px;
+  line-height: 38px;
+  border-bottom: 3px solid #d9d9d9;
+  position: relative;
+  z-index: 0;
+  margin-top: 10px;
+}
+.car_title h2{ 
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom: 3px solid #0965b2;
+  font-size: 20px;
+  font-family: "Microsoft Yahei";
+}
+.car_ul li{
+  margin: 10px 0;
+  height: 124px;  
+}
+.sl_img{
+  float: left;
+}
+.carli_qx{
+  float: left;
+  margin-left: 10px;
+}
+.carli_qx h2{
+  font-size: 16px;
+}
+.carli_qx p{
+  line-height: 32px;
+}
+.ico_c{
+  display: inline-block;
+  padding: 2px;
+  color: #fff;
+  margin-left: 2px;
+  background: #D60000;
+}
+.price-sales{
+  width: 100%; 
+}
+.money{
+  font-size: 14px;
+  font-weight: bold;
+  color: #d60000;
+}
+.car_size{
+  float: left;
+}
+.car_disp{
+  margin-left: 20px;
+  float: left;
+}
+.xq_button a{
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: #0965b2;
+  color:#fff;
+} 
+.new_car{
+  float: left;
+  width: 660px;
+  margin-left: 30px;
+}
+.car_table{
+  width: 100%;
+}
+.car_tab_tit {
+  width: 100%;
+   box-sizing: border-box;
+   border-bottom: 1px solid #d9d9d9;
+}
+.car_tab_tit span{
+  float: left;
+  width: 17%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center; 
+}
+.car_tab_tit span:first-child{
+  width: 30%;
+}
+.car_cx_txt ul li{
+  padding: 4px 0;
+  height: 32px;
+  line-height: 32px;
+  margin:2px 0;
+}
+.car_cx_txt ul li span:first-child{
+    width: 30%;
+}
+.car_cx_txt ul li span{
+  float: left;
+  width: 17%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+.green{
+  color: green;
+  background: url("../images/down.png") no-repeat left center;
+}
+.red{
+  color: #d60000;
+  font-weight: bold;
+    font-family: Arial;
+}
+.ask{
+  height: 30px;
+  line-height: 30px;
+  background:#0965B2;
+  color: #fff;
+}
+.ask a{
+  display: inline-block;
+  width: 100%;
+  color: #fff;
+}
+/*第三行*/ 
+.new_notice{
+  float: left;
+  width: 500px;
+}
+.new_notice ul{
+  padding: 4px 0;
+}
+.new_notice ul li{
+  text-align: right;
+  margin: 10px 0;
+  padding: 4px 0;
+}
+.new_notice ul li a{
+  float: left;
+}
+.contact_me{
+  float: left;
+  width: 420px;
+  margin-left: 30px;
+}
+.address{
+  padding-top: 10px;
+}
+.address p{
+  line-height: 28px;
+}
+.click{
+  cursor: pointer;
+}
+.link{
+  float: right;
+  width: 240px;  
+}
+.linkyq{
+  text-align: center;
+  padding-top: 20px;
+}
+.link a{
+  float: left;
+  width: 50%;
+  margin:4px 0;
+}
+.link a:hover{
+  color: #09B216;
+}
+/*底部*/
+.footer{
+  background: #0965b2;
+  padding: 10px;
+  color: #fff;
+}
+.footer p{
+  line-height: 24px;
+}
+.copy{
+  font-size: 16px;
+  text-align: center;
+}
+.prot{
+  color: #889;
+  text-align: center;
+}
+.prot a{
+  color: #889;
+}
+.prot a:hover{
+  color: #fff;
+}
+
+/*----------------产品列表页--------------*/
+.postion {
+  padding: 10px 0;
+}
+.postion a{
+  margin: 10px;
+}
+.postion p{
+  color: #999;
+}
+.produce{
+  margin-top: 4px;
+}
+.main_list{
+  float: left;
+  width: 280px;
+  border: 1px solid #dadada;
+}
+.seller-title {
+  height: 34px;
+  line-height: 34px;
+  border-top: 3px solid #0965b2;
+  border-bottom: 1px solid #dadada;
+  padding: 0 10px;
+  background-color: #fafafa;
+  overflow: hidden;  
+}
+.seller-title .title-text {
+  font-size: 14px;
+  font-weight: bold;
+  color: #0965b2;
+  float: left;
+}
+.pro_fl{
+  padding: 10px;
+}
+.pro_fl ul li{
+  padding-left: 40px;
+  margin: 10px 0;
+  height: 30px;
+  line-height: 30px;
+  background: url("../images/listbg.png") no-repeat;
+}
+.pro_fl ul li a{
+  color: #000;
+}
+.main_content{
+  float: right;
+  width: 900px;
+  overflow: hidden;
+}
+.c_title{
+  height: 35px;
+  line-height: 35px;
+  border-top: 3px solid #ccc;
+  position: relative;
+  z-index: 0;
+}
+.c_title h2{
+  display: inline-block;
+  position: absolute;
+  top: -3px;
+  left: 0;
+  border-top: 3px solid #0965b2;
+  font-size: 20px;
+  font-family: "Microsoft Yahei";
+}
+.c_title .more{
+  float:right;
+  color: #999;
+  display: block;
+  height: 20px;
+  line-height: 20px;
+  padding-top: 6px;
+}
+.more em{
+ font-style:normal;
+  color: #c00;
+  font-weight: bold;
+}
+.car_min_tab{
+  padding: 10px;
+  border:1px solid #ebebeb;
+  overflow: hidden;
+}
+.car_min_tab ul li{  
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+.car_top{
+  border-bottom: 1px solid #f4f4f4;
+  overflow: hidden;
+}
+.car_top img{
+  float: left;
+  width: 160px;
+  height: 120px;
+  margin-right: 10px;
+}
+.car_top p{
+  line-height: 32px;
+  color:#999;
+}
+.car_name a{
+  color: #333;
+  text-decoration: none;
+}
+.car_money{
+  font-size: 18px;
+  font-weight: bold;
+  color:#c00;
+}
+.down_moeny{
+  float: right;
+  font-size: 18px;
+  color: #fe7e10;
+  display: inline-block;
+  padding-left: 20px;
+  background: url("../images/down.png") no-repeat left center;
+}
+.yj{
+  color: #999;
+  font-size: 12px;
+}
+.ck {
+  cursor: pointer;
+  float: right;
+  padding: 0px 6px;
+  color: #fff; 
+  background:#E13b2E;
+}
+
+/*---------------新闻资讯页面--------------------*/
+.news_content{
+  padding: 10px 0;
+}
+.news_left{
+  float: left;
+  width: 280px;
+  overflow: hidden;
+  border: 1px solid #dadada;
+}
+.company_new h2{
+  text-align: center;
+  font-size: 16px;
+}
+.company_new p{
+  line-height: 32px;
+  padding-left: 10px;
+}
+.yyzz{
+  position: relative;
+}
+.yyzz img{
+  position: absolute;
+  bottom: 0;
+}
+.news_right{
+  float: right;
+  width: 900px;
+}
+.news_ul{
+  border: 1px solid #dedede;
+}
+.news_ul ul li{
+  text-align: left;
+  overflow: hidden;
+  padding: 4px;
+  border-bottom: 1px solid #ccc;
+}
+.news_ul ul li h2 a{
+  font-size: 18px;
+  color: #333;
+  font-size: 
+}
+.time_d{
+  color: #666;
+}
+.news_ul ul li p{
+  line-height: 32px;
+}
+.img_right{
+  float: right;
+}
+.img_right img{
+  width: 160px;
+  height: 120px;
+}
+/*-------------单页页面----公司简介页面----------------*/
+.public{
+  margin-bottom: 10px;
+}
+.public_left{
+  float: left;
+  width:300px;
+  border:1px solid #dedede;
+}
+.pb_ul ul li{
+  margin: 10px 0;  
+  padding-bottom: 4px;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+}
+.pb_ul ul li img{
+  width: 140px;
+  height: 120px;
+  margin: 0 10px;
+}
+.pb_ul ul li h2 a{
+  display: block;
+  font-size: 14px;
+  color: #333;  
+}
+.pb_ul ul li p{
+  line-height: 26px;
+}
+.public_right{
+  float: right;
+  width:890px;
+}
+.public_content{
+  padding: 10px;
+  border:1px solid #ccc;
+  margin-top: -1px;
+  margin-bottom: 10px;
+}
+.public_content h2{
+  text-align: center;
+  font-size: 18px; 
+}
+.public_content p{
+  line-height: 28px;
+}
+.public_content img{
+  max-width: 100%;
+}
+.company_show{ 
+padding-top: 10px;  
+}
+.company_show ul{
+  padding: 10px;
+  border:1px solid #ccc; 
+}
+.company_show ul li{
+  float: left;
+  margin: 10px;
+}
+.company_show ul li img{
+  width: 197px;
+  height: 144px;
+}
+
+/*---------------销售代表页面-------*/
+.personal{
+  padding:0 10px;
+}
+.personal_ul ul {
+  border:1px solid #ccc;
+}
+.personal_ul ul li{
+  padding: 10px;
+  overflow: hidden;
+  border-bottom: 1px solid #ccc;
+}
+.personal_ul ul li img{
+  width: 140px;
+  height: 140px;
+  margin-right: 10px;
+}
+.personal_ul ul li h2{
+  margin-bottom: 10px;
+}
+.right_button{
+  float: right;
+  padding: 4px 10px;
+  background: #128ccd;
+  border: 1px solid #128ccd;
+  color: #fff;
+}
+.right_button a{
+  color: #fff;
+}
+
+/*翻页*/
+.page{
+  padding: 10px;
+}
+.page ul li{
+  float: left;    
+  margin: 4px;  
+  border: 1px solid #ccc;
+  text-align: center;
+}
+.page ul li a{
+  display: inline-block;
+  padding: 4px 10px;  
+}
+.page ul li:hover{
+  color: #fff;
+  background: #f9644e;
+}
+.page ul .thisClass{
+  color: #fff;
+  background: #f9644e;
+}
+.page ul .thisClass a{
+  color: #fff;
+}
+
+/*----------------在线留言页面---------*/
+#goumai {
+  margin:50px 0px;
+  background:url("../images/b.jpg") right no-repeat;
+}
+#goumai table td {
+  padding-bottom:22px;
+  font-size:14px;
+  color:#534c4c;
+}
+#goumai table td .text {
+  border:1px solid #d1c0a5;
+  height:36px;
+  line-height:36px;
+  width:315px;
+  font-family:"微软雅黑";
+  font-size:14px;
+  text-indent:8px;
+}
+#goumai table td textarea {
+  border:1px solid #d1c0a5;
+  width:533px;
+  height:133px;
+  line-height:25px;
+  padding:5px;
+}
+#goumai table td .sub {
+  width:278px;
+  height:44px;
+  line-height:44px;
+  border:none;
+  background:#cb3222;
+  font-size:20px;
+  color:#FFFFFF;
+  font-family:"微软雅黑";
+  cursor:pointer;
+}

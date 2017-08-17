@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>降价汽车</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+</head>
+<body>
+<!-- js -->
+<script>
+				function writeDateInfo()
+				{
+				        var day="";
+				        var month="";
+				        var ampm="";
+				        var ampmhour="";
+				        var myweekday="";
+				        var year="";
+				        mydate=new Date();
+				        myweekday=mydate.getDay();
+				        mymonth=mydate.getMonth()+1;
+				        myday= mydate.getDate();
+				        myyear= mydate.getYear();
+				        year=(myyear > 200) ? myyear : 1900 + myyear;
+				        if(myweekday == 0)
+				        weekday=" 星期日";
+				        else if(myweekday == 1)
+				        weekday=" 星期一";
+				        else if(myweekday == 2)
+				        weekday=" 星期二";
+				        else if(myweekday == 3)
+				        weekday=" 星期三";
+				        else if(myweekday == 4)
+				        weekday=" 星期四";
+				        else if(myweekday == 5)
+				        weekday=" 星期五";
+				        else if(myweekday == 6)
+				        weekday=" 星期六";
+				        document.write(year+"年"+mymonth+"月"+myday+"日"+weekday);
+				} 
+				window.onload=function ()
+				{
+					var oS=document.getElementById('s1');
+					
+					
+					function tick()
+					{
+						var oDate=new Date();
+						var H = AddZero(oDate.getHours());
+						var M = AddZero(oDate.getMinutes());
+						var S = AddZero(oDate.getSeconds());
+						
+						oS.innerHTML=H+':'+M+':'+S;
+					}
+					setInterval(tick, 1000);
+					tick();
+					
+					function AddZero(n)
+					{
+					    if(n<10)
+						{
+						    return '0'+n;
+						}else{
+						    return ''+n;
+						};
+					};
+				};
+</script>
+<script type="text/javascript" language="javascript">
+    //加入收藏
+        function AddFavorite(sURL, sTitle) {
+            sURL = encodeURI(sURL); 
+        try{   
+            window.external.addFavorite(sURL, sTitle);   
+        }catch(e) {   
+            try{   
+                window.sidebar.addPanel(sTitle, sURL, "");   
+            }catch (e) {   
+                alert("加入收藏失败，请使用Ctrl+D进行添加,或手动在浏览器里进行设置.");
+            }   
+        }
+    }
+    //设为首页
+    function SetHome(url){
+ 
+        if (document.all) {
+ 
+            document.body.style.behavior='url(#default#homepage)';
+ 
+               document.body.setHomePage(url);
+ 
+        }else{
+ 
+            alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+        }
+    }
+</script>
+	
+	<div class="header">
+		<div class="wp clearfix">
+			<ul class="clearfix wbx left">
+				<li><a href="#"><img src="images/weibo.jpg" alt="官方微博"></a></li>
+				<li class="wx_li">
+					<a href="#"><img src="images/weixin.jpg" alt="官方微信"></a>
+					<div class="wx_img">
+						<img src="images/wei.jpg" alt="s">
+					</div>
+				</li>
+			</ul>			
+			<p class="left s1"><script>writeDateInfo();</script></p>
+			<p class="left s1" id="s1"></p>
+
+			<div class="right">
+				<div class="top_link">
+				<a onclick="SetHome(window.location)" href="javascript:void(0)">设为首页</a>|<a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)">加入收藏</a>|<a href="javascript:void(0);" class="click">网站地图</a>
+				</div>
+				<div class="ser">
+	                <form name="dataForm" class="search" action="#" target="_blank" method="post" accept-charset="utf-8" onsubmit="document.charset=&#39;utf-8&#39;;">
+	    			<input name="siteID" value="1" type="hidden">
+	    			<input class="notxt" value="" name="query" type="text" id="keywords" onfocus="if(value==defaultValue){value=&#39;&#39;;}" onblur="if(!value){value=defaultValue;}" onclick="if(this.value==&#39;&#39;){this.value=&#39;&#39;;this.form.keywords.style.color=&#39;#3c98cc&#39;}">
+	    			<input class="notxt1" name="Submit" type="submit" value="">
+					</form>
+                </div>
+			</div>
+		</div>		
+	</div>
+	<!-- 轮播 -->	
+	<div class="banner">
+		<div class="wp">			
+			<div class="swiper-container">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide"><img src="images/1.jpg" alt="1"></div>
+			        <div class="swiper-slide"><img src="images/2.jpg" alt="1"></div>
+			        <div class="swiper-slide"><img src="images/3.jpg" alt="1"></div>                 
+			    </div>
+			    <!-- 圆点按键 -->
+			    <div class="swiper-pagination"></div>
+			    <!-- 左右按键 -->
+			    <div class="swiper-button-next"></div>
+			    <div class="swiper-button-prev"></div>
+			</div>
+		</div>
+	</div>
+	<!-- 导航 -->
+	<div class="nav">
+		<div class="wp">
+			<ul class="clearfix">
+				<li class="hover">
+					<a href="index.html">网站首页</a>
+				</li>
+				<li>
+					<a href="produce.html">车型报价</a>
+				</li>
+				<li>
+					<a href="ja_produce.html">促销信息</a>
+				</li>
+				<li>
+					<a href="news.html">新闻资讯</a>
+				</li>
+				<li>
+					<a href="personal.html">销售顾问</a>
+				</li>
+				<li>
+					<a href="company.html">公司介绍</a>
+				</li>
+				<li>
+					<a href="contact.html">联系我们</a>
+				</li>
+				<li>
+					<a href="wh_form.html">在线留言</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<!-- 当前位置 -->
+	<div class="wp">
+		<div class="postion">
+			<p>当前位置：<a href="#">主页</a><a href="#">主页</a></p>
+		</div>
+	</div>
+	<div class="wp">
+		<div class="produce clearfix">
+			<div class="main_list">
+				<div class="seller-title"><span class="title-text">主营品牌</span></div>
+				<div class="pro_fl">
+					<ul>
+						<li><a href="#">全新胜达</a></li>
+						<li><a href="#">瑞纳</a></li>
+						<li><a href="#">ix35</a></li>
+						<li><a href="#">ix25</a></li>
+						<li><a href="#">悦动</a></li>
+						<li><a href="#">途胜</a></li>
+						<li><a href="#">朗动</a></li>
+						<li><a href="#">新胜达</a></li>
+						<li><a href="#">雅科仕</a></li>
+						<li><a href="#">雅科仕加长版</a></li>
+						<li><a href="#">雅尊</a></li>
+						<li><a href="#">劳恩斯prada</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="main_content">
+				<div class="c_title">
+					<h2>促销信息</h2>
+					<span class="more">咨询热线：<em class="red">0313-4022777</em></span>
+				</div>
+
+				<div class="car_min_tab">
+				<ul>
+					<li>
+						<div class="car_top">
+							<a href="#"><img src="images/c1.jpg" alt="c1"></a>
+							<h2 class="car_name"><a href="#">朗逸</a></h2>
+							<p><span class="car_money">7.54-16.59 万</span><span class="yj">(厂商价：10.99-16.59 万)</span><span class="down_moeny">1.7万元</span></p>
+							<p class="car_size">
+								<span>车&nbsp;&nbsp;型：</span><span>5门5座SUV</span>
+							</p>
+							<p class="car_disp">
+								<span>排&nbsp;&nbsp;量：</span><span>1.8T</span>
+							</p>
+							<p class="car_disp">变速箱：手自一体 双离合 手动</p>
+							<p><a class="ck">查看详情</a></p>
+						</div>
+					</li>
+					<li>
+						<div class="car_top">
+							<a href="#"><img src="images/c1.jpg" alt="c1"></a>
+							<h2 class="car_name"><a href="#">朗逸</a></h2>
+							<p><span class="car_money">7.54-16.59 万</span><span class="yj">(厂商价：10.99-16.59 万)</span><span class="down_moeny">1.7万元</span></p>
+							<p class="car_size">
+								<span>车&nbsp;&nbsp;型：</span><span>5门5座SUV</span>
+							</p>
+							<p class="car_disp">
+								<span>排&nbsp;&nbsp;量：</span><span>1.8T</span>
+							</p>
+							<p class="car_disp">变速箱：手自一体 双离合 手动</p>
+							<p><a class="ck">查看详情</a></p>
+						</div>
+					</li>
+				</ul>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

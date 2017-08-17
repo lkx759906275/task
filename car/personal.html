@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>人员</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+</head>
+<body>
+<!-- js -->
+<script>
+				function writeDateInfo()
+				{
+				        var day="";
+				        var month="";
+				        var ampm="";
+				        var ampmhour="";
+				        var myweekday="";
+				        var year="";
+				        mydate=new Date();
+				        myweekday=mydate.getDay();
+				        mymonth=mydate.getMonth()+1;
+				        myday= mydate.getDate();
+				        myyear= mydate.getYear();
+				        year=(myyear > 200) ? myyear : 1900 + myyear;
+				        if(myweekday == 0)
+				        weekday=" 星期日";
+				        else if(myweekday == 1)
+				        weekday=" 星期一";
+				        else if(myweekday == 2)
+				        weekday=" 星期二";
+				        else if(myweekday == 3)
+				        weekday=" 星期三";
+				        else if(myweekday == 4)
+				        weekday=" 星期四";
+				        else if(myweekday == 5)
+				        weekday=" 星期五";
+				        else if(myweekday == 6)
+				        weekday=" 星期六";
+				        document.write(year+"年"+mymonth+"月"+myday+"日"+weekday);
+				} 
+				window.onload=function ()
+				{
+					var oS=document.getElementById('s1');
+					
+					
+					function tick()
+					{
+						var oDate=new Date();
+						var H = AddZero(oDate.getHours());
+						var M = AddZero(oDate.getMinutes());
+						var S = AddZero(oDate.getSeconds());
+						
+						oS.innerHTML=H+':'+M+':'+S;
+					}
+					setInterval(tick, 1000);
+					tick();
+					
+					function AddZero(n)
+					{
+					    if(n<10)
+						{
+						    return '0'+n;
+						}else{
+						    return ''+n;
+						};
+					};
+				};
+</script>
+<script type="text/javascript" language="javascript">
+    //加入收藏
+        function AddFavorite(sURL, sTitle) {
+            sURL = encodeURI(sURL); 
+        try{   
+            window.external.addFavorite(sURL, sTitle);   
+        }catch(e) {   
+            try{   
+                window.sidebar.addPanel(sTitle, sURL, "");   
+            }catch (e) {   
+                alert("加入收藏失败，请使用Ctrl+D进行添加,或手动在浏览器里进行设置.");
+            }   
+        }
+    }
+    //设为首页
+    function SetHome(url){
+ 
+        if (document.all) {
+ 
+            document.body.style.behavior='url(#default#homepage)';
+ 
+               document.body.setHomePage(url);
+ 
+        }else{
+ 
+            alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+        }
+    }
+</script>
+	
+	<div class="header">
+		<div class="wp clearfix">
+			<ul class="clearfix wbx left">
+				<li><a href="#"><img src="images/weibo.jpg" alt="官方微博"></a></li>
+				<li class="wx_li">
+					<a href="#"><img src="images/weixin.jpg" alt="官方微信"></a>
+					<div class="wx_img">
+						<img src="images/wei.jpg" alt="s">
+					</div>
+				</li>
+			</ul>			
+			<p class="left s1"><script>writeDateInfo();</script></p>
+			<p class="left s1" id="s1"></p>
+
+			<div class="right">
+				<div class="top_link">
+				<a onclick="SetHome(window.location)" href="javascript:void(0)">设为首页</a>|<a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)">加入收藏</a>|<a href="javascript:void(0);" class="click">网站地图</a>
+				</div>
+				<div class="ser">
+	                <form name="dataForm" class="search" action="#" target="_blank" method="post" accept-charset="utf-8" onsubmit="document.charset=&#39;utf-8&#39;;">
+	    			<input name="siteID" value="1" type="hidden">
+	    			<input class="notxt" value="" name="query" type="text" id="keywords" onfocus="if(value==defaultValue){value=&#39;&#39;;}" onblur="if(!value){value=defaultValue;}" onclick="if(this.value==&#39;&#39;){this.value=&#39;&#39;;this.form.keywords.style.color=&#39;#3c98cc&#39;}">
+	    			<input class="notxt1" name="Submit" type="submit" value="">
+					</form>
+                </div>
+			</div>
+		</div>		
+	</div>
+	<!-- 轮播 -->	
+	<div class="banner">
+		<div class="wp">			
+			<div class="swiper-container">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide"><img src="images/1.jpg" alt="1"></div>
+			        <div class="swiper-slide"><img src="images/2.jpg" alt="1"></div>
+			        <div class="swiper-slide"><img src="images/3.jpg" alt="1"></div>                 
+			    </div>
+			    <!-- 圆点按键 -->
+			    <div class="swiper-pagination"></div>
+			    <!-- 左右按键 -->
+			    <div class="swiper-button-next"></div>
+			    <div class="swiper-button-prev"></div>
+			</div>
+		</div>
+	</div>
+	<!-- 导航 -->
+	<div class="nav">
+		<div class="wp">
+			<ul class="clearfix">
+				<li class="hover">
+					<a href="index.html">网站首页</a>
+				</li>
+				<li>
+					<a href="produce.html">车型报价</a>
+				</li>
+				<li>
+					<a href="ja_produce.html">促销信息</a>
+				</li>
+				<li>
+					<a href="news.html">新闻资讯</a>
+				</li>
+				<li>
+					<a href="personal.html">销售顾问</a>
+				</li>
+				<li>
+					<a href="company.html">公司介绍</a>
+				</li>
+				<li>
+					<a href="contact.html">联系我们</a>
+				</li>
+				<li>
+					<a href="wh_form.html">在线留言</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 当前位置 -->
+	<div class="wp">
+		<div class="postion">
+			<p>当前位置：<a href="#">主页</a><a href="#">主页</a></p>
+		</div>
+	</div>
+
+	<div class="wp">
+		<div class="public clearfix">
+			<div class="public_left">
+				<div class="seller-title"><span class="title-text">最新车型</span><span class="right"><a href="#">更多+</a></span></div>
+				<div class="pb_ul">	
+					<ul>
+						<li>
+							<div class="left">
+								<a href="#"><img src="images/c2.jpg" alt="c1"></a>
+							</div>
+							<h2><a href="#">一汽-大众CC 2016款 1.8TSI 豪华型</a></h2>
+							<p class="car_cx">车型：5座</p>
+							<p class="car_pl">排量：1.8L</p>
+							<p class="red">报价：23.68 万</p>
+						</li>
+						<li>
+							<div class="left">
+								<a href="#"><img src="images/c2.jpg" alt="c1"></a>
+							</div>
+							<h2><a href="#">一汽-大众CC 2016款 1.8TSI 豪华型</a></h2>
+							<p class="car_cx">车型：5座</p>
+							<p class="car_pl">排量：1.8L</p>
+							<p class="red">报价：23.68 万</p>
+						</li>
+						<li>
+							<div class="left">
+								<a href="#"><img src="images/c2.jpg" alt="c1"></a>
+							</div>
+							<h2><a href="#">一汽-大众CC 2016款 1.8TSI 豪华型</a></h2>
+							<p class="car_cx">车型：5座</p>
+							<p class="car_pl">排量：1.8L</p>
+							<p class="red">报价：23.68 万</p>
+						</li>
+					</ul>
+				</div>
+				<div class="seller-title"><span class="title-text">公司信息</span></div>
+				<div class="company_new">
+					<h2>张家口市达贸汽车销售服务有限公司</h2>
+					<p>所属级别：4S店</p>
+					<p class="yyzz">营业执照:<a href="javascrip:void(0);"><img src="images/yyzz.png" layer-src="images/05.jpg" alt="营业执照"></a></p>
+					<p>咨询电话：<a class="red" href="tel:0313-4022777">0313-4022777</a></p>
+					<p>店面地址：<a class="click">张家口市高新区胜利中路202号（纬三路华耐家居斜对面）</a></p>
+				</div>
+			</div>
+			<div class="public_right">
+				<div class="personal">
+					<div class="c_title">
+						<h2>公司人员</h2>
+						<span class="more">咨询热线：<em class="red">0313-4022777</em></span>
+					</div>
+					<div class="personal_ul">
+						<ul>
+							<li>
+								<div class="left">
+									<a href="#"><img src="images/person.jpg" alt="ren"></a>
+								</div>
+								<h2>德莱厄斯</h2>
+								<p>业务范围：销售代表</p>
+								<p><span class="right_button"><a href="#">咨询我们</a></span></p>
+							</li>
+							<li>
+								<div class="left">
+									<a href="#"><img src="images/person.jpg" alt="ren"></a>
+								</div>
+								<h2>德莱厄斯</h2>
+								<p>业务范围：销售代表</p>
+								<p><span class="right_button"><a href="#">咨询我们</a></span></p>
+							</li>
+							<li>
+								<div class="left">
+									<a href="#"><img src="images/person.jpg" alt="ren"></a>
+								</div>
+								<h2>德莱厄斯</h2>
+								<p>业务范围：销售代表</p>
+								<p><span class="right_button"><a href="#">咨询我们</a></span></p>
+							</li>
+						</ul>
+					</div>
+					<div class="page">
+						<ul class="clearfix">
+							<li>
+								<a href="#">1</a>
+							</li>
+							<li>
+								<a href="#">2</a>
+							</li>
+							<li>
+								<a href="#">3</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		 <!-- 底部 -->
+	<div class="footer">
+		<div class="wp">
+			<p class="copy">Copyright &copy; 张家口市达贸汽车销售服务有限公司</p>
+			<p class="prot">技术支持：<a href="http://www.0313it.net/" title="张家口网站建设" target="_blank">易互科技</a></p>
+		</div>
+	</div>
+	<!-- js -->
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/swiper.min.js"></script>	
+	<script src="layer/layer.js"></script>
+	<script src="js/index.js"></script>	
+</body>
+</html>
